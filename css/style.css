@@ -1,0 +1,73 @@
+:root {
+    --gradient-bg: linear-gradient(to right, #0f0f0f, #333);
+    --alert-bg: linear-gradient(to bottom, #0f0f0f, #D41414);
+}
+
+* {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    list-style: none;
+}
+
+body {
+    background-image: var(--gradient-bg);
+    color: white;
+
+    height: 100vh;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+.form-check-label {
+    span.h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+}
+
+.docs a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 24px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.alert-hour {
+    animation-name: alertable;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.select-all {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.hide-checkbox {
+    display: none;
+}
+
+@keyframes alertable {
+    from {
+        background-image: var(--gradient-bg);
+    }
+
+    to {
+        background-image: var(--alert-bg);
+    }
+}
