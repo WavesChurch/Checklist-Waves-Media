@@ -1,8 +1,8 @@
 ![logo](./_media/logo-Waves.png ":class=logo-iba")
 
-# Igreja Batista Ágape - Equipe de Mídia
+# Waves Church - Media Team
 
-## Documentação para transmissão e projeção dos cultos.
+## Documentation for the media during service
 
-[Ir para Checklist](https://ibasjbv.github.io/Checklist-IBA-Live)
-[Ler documentação](#dicas-gerais)
+[Ir para Checklist](https://waveschurch.github.io/Checklist-Waves)
+[Ler documentação](#tips)

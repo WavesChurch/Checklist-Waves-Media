@@ -6,7 +6,7 @@ const selecionarTodosOsMinimizers = [
   ...document.getElementsByClassName("minimizerMaximizer"),
 ];
 
-const infoCulto = () => {
+const infoService = () => {
   const day = moment().day();
   const today = moment().format("MM/DD/YYYY");
 
@@ -15,7 +15,7 @@ const infoCulto = () => {
   return "Sem Culto";
 };
 
-const privacidadeCulto = () => {
+const privacyService = () => {
   const day = moment().day();
 
   if (day == 0 || day == 3) {
@@ -25,7 +25,7 @@ const privacidadeCulto = () => {
   }
 };
 
-const configInicial = {
+const initialConfig = {
   id: "TurnEquipmentOn",
   todo: [
     { title: "Check that all computers are on (see the white status light in the front)" },
@@ -33,125 +33,71 @@ const configInicial = {
     { title: "Turn the 'led' labeled switch on the NaverPoint" },
     { title: "Check that the two Nova Star VX1000 video processors turned on (switches on the back)" },
     { title: "Turn the 'hyperx' labeled switch on the NavePoint for the HyperDeck" },
-    { title: "Turn on the 'lobby' labeled switch in the NavePoint for the TVs in the lobby" },
-    { title: "Turn on the TVs in the lobby (LG Control), they should be at volume 20" },
     { title: "Set the Audio Splitter above the NavePoint to 'Broadcast'" },
   ],
 };
 
-const prepararHolyrics = {
-  id: "PrepararHolyrics",
+const TurnTVsOn = {
+  id: "TurnTVsOn",
   todo: [
-    { title: "Pegar versículos no grupo 'Sermão e Flyers' do Whatsapp" },
-    {
-      title:
-        "Louvores (Caso não tenha o louvor, pesquisar com Ctrl + Shift + H)",
-    },
-    { title: "Deixar louvores com até 2 linhas por verso" },
-    { title: "Checar se louvor é exibido no OBS" },
+    { title: "Turn on the 'lobby' labeled switch in the NavePoint for the TVs in the lobby" },
+    { title: "Turn on the TVs in the lobby (LG Control), they should be at volume 20" },
   ],
 };
 
-const prepararOBS = {
-  id: "PrepararOBS",
+const SetCamerasUp = {
+  id: "SetCamerasUp",
   todo: [
-    {
-      title:
-        "Checar se som chega no OBS (verificar captura de  entrada de audio no painel 'Mixer de áudio')",
-    },
-    { title: "Projetar tela do OBS" },
-    { title: "Atualizar vídeo dos avisos" },
-    { title: "Atualizar cache do Holyrics Biblia" },
-    { title: "Atualizar cache do Holyrics Louvor" },
-    { title: "Atualizar cache de Holyrics Imagem" },
+    { title: "placeholder" },
   ],
 };
 
-const prepararTransmissaoYt = {
-  id: "PrepararTransmissaoYt",
+const configLivestream = {
+  id: "ConfigureLivestream",
   todo: [
-    { title: "Abrir página da transmissão do Youtube" },
-    { title: "Adicionar título: " + infoCulto() },
-    { title: "Atualizar thumbnail com base no dia da semana" },
-    {
-      title: "Visibilidade - " + privacidadeCulto(),
-    },
+    { title: "placeholder" },
+    { title: "Add title: " + infoService() },
+    { title: "Visibility - " + privacyService() },
   ],
 };
 
-const compartilharTransmissao = () => {
-  const day = moment().day();
-
-  if (day == 0 || day == 3) {
-    return { title: "Divulgar link da transmissão no grupo da igreja" };
-  } else {
-    return { title: "Enviar link apenas no grupo de Mídia" };
-  }
-};
-
-const minutos5 = {
-  id: "CincoMinutos",
+const worship = {
+  id: "Worship",
   todo: [
-    { title: "Posicionar câmera em quem dará abertura" },
-    { title: "Mudar para cena 'Início' para iniciar a contagem regressiva" },
-    { title: "Iniciar Transmissão no OBS" },
-    { title: "Verificar se transmissão iniciou" },
-    compartilharTransmissao(),
+    { title: "placeholder" },
   ],
 };
 
-const abertura = {
-  id: "Abertura",
+const tithesAndOffering = {
+  id: "TithesOffering",
   todo: [
-    { title: "Exibir o nome do pregador por 30s" },
-    { title: "Verificar qualidade da transmissão" },
+    { title: "placeholder" },
   ],
 };
 
-const louvor = {
-  id: "Louvor",
-  todo: [{ title: "Marcar as músicas como tocadas" }],
-};
-
-const dizimo = {
-  id: "Dizimo",
+const sermon = {
+  id: "Sermon",
   todo: [
-    { title: "Ao iniciar louvor, exibir dados bancários" },
-    { title: "Após oração, remover dados bancários" },
+    { title: "placeholder" },
   ],
 };
 
-const duranteCulto = {
-  id: "duranteCulto",
-  todo: [{ title: "Rodar banner de 'Redes Sociais' no OBS" }],
-};
-
-const encerrarTransmissao = {
-  id: "EncerrarTransmissao",
+const finish = {
+  id: "Finish",
   todo: [
-    { title: "Mudar para a cena final" },
-    { title: "Desvanecer para preto" },
-    { title: "Interromper transmissão no OBS" },
-    { title: "Encerrar transmissão no Youtube" },
-    { title: "Desligar câmera" },
-    { title: "Remover versículos do favoritos" },
-    { title: "Fechar Holyrics" },
-    { title: "Fechar OBS" },
-    { title: "Fechar Youtube" },
+    { title: "placeholder" },
   ],
 };
 
 const todos = [
-  configInicial,
-  prepararOBS,
-  prepararHolyrics,
-  prepararTransmissaoYt,
-  minutos5,
-  abertura,
-  louvor,
-  dizimo,
-  duranteCulto,
-  encerrarTransmissao,
+  initialConfig,
+  TurnTVsOn,
+  SetCamerasUp,
+  configLivestream,
+  worship,
+  tithesAndOffering,
+  sermon,
+  finish,
 ];
 
 todos.forEach((item) => renderizarItemDoChecklist(item));
@@ -169,18 +115,18 @@ function renderizarItemDoChecklist(obj) {
 
   obj.todo.forEach(
     (item) =>
-      (element.innerHTML += `
+    (element.innerHTML += `
         <div class="form-check check-all">
-            	<label class="form-check-label">
-            		<input class="form-check-input" type="checkbox">  
-            		${item.title}
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox">  
+              ${item.title}
         	</label>
         </div>`)
   );
 }
 
 function minimizarOuMaximizarTodosDoGrupo(target, isChecked) {
-    const form = document.getElementById(target.dataset.target);
+  const form = document.getElementById(target.dataset.target);
 
   return isChecked
     ? form.classList.add("hide-checkbox")
