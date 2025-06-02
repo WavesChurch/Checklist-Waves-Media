@@ -31,7 +31,7 @@ const initialConfig = {
     { title: "Check that all computers are on (see the white status light in the front)" },
     { title: "Turn the Camera Switcher on (button is below table)" },
     { title: "Turn the 'led' labeled switch on the NaverPoint" },
-    { title: "Check that the two Nova Star VX1000 video processors turned on (switches on the back)" },
+    { title: "Check that the two Nova Star VX1000 video processors are turned on (switches on the back)" },
     { title: "Turn the 'hyperx' labeled switch on the NavePoint for the HyperDeck" },
     { title: "Set the Audio Splitter above the NavePoint to 'Broadcast'" },
   ],
@@ -41,7 +41,7 @@ const TurnTVsOn = {
   id: "TurnTVsOn",
   todo: [
     { title: "Turn on the 'lobby' labeled switch in the NavePoint for the TVs in the lobby" },
-    { title: "Turn on the TVs in the lobby (LG Control), they should be at volume 20" },
+    { title: "Turn on the TVs in the lobby (LG Control), and set volume to 20" },
   ],
 };
 
