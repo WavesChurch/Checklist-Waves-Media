@@ -1,8 +1,8 @@
-![logo](./_media/logo-Waves.png ":class=logo-iba")
+![logo](./_media/logo-Waves-Inverted.png ":class=logo-waves")
 
 # Waves Church - Media Team
 
 ## Documentation for the media during service
 
-[Ir para Checklist](https://waveschurch.github.io/Checklist-Waves)
-[Ler documentação](#tips)
+[Go To Checklist](https://waveschurch.github.io/Checklist-Waves-Media)
+[Read Documentation](#tips)
