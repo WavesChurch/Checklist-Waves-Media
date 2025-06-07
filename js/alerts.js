@@ -2,10 +2,9 @@ const alertInputs = document.querySelectorAll('.alertAt');
 const body = document.getElementById('checklist');
 const stopButton = document.getElementById('btnStopAlert');
 
-const triggeredAlerts = new Set(); // to prevent re-triggering
+const triggeredAlerts = new Set(); 
 let currentAlertIdPlaying = null;
 
-// Check every second for matching times
 setInterval(() => {
   const now = new Date();
   const currentHHMM = now.toTimeString().slice(0, 5); // "HH:MM"

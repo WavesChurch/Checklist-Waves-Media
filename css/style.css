@@ -11,11 +11,11 @@
 
 body {
     color: white;
-    min-height: 100vh; /* ensures body is at least full screen height */
-    background: linear-gradient(to bottom, #0f0f0f, #333); /* your gradient */
+    min-height: 100vh; 
+    background: linear-gradient(to bottom, #0f0f0f, #333); 
     background-repeat: no-repeat;
-    background-attachment: fixed;  /* optional - keeps it in place while scrolling */
-    background-size: cover;        /* makes the gradient scale properly */
+    background-attachment: fixed;  
+    background-size: cover;
     margin: 0;
     padding: 0;
 
