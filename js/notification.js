@@ -4,7 +4,7 @@ function mostrarNotificacao() {
 
     if (Notification.permission === "granted") {
       // Se a permissão já foi concedida, exibe a notificação
-      const notification = new Notification("Checklist Live IBA", {
+      const notification = new Notification("Checklist Live Waves", {
         body: "A live está prestes a iniciar.",
       });
     } else if (Notification.permission !== "denied") {
@@ -12,7 +12,7 @@ function mostrarNotificacao() {
       Notification.requestPermission().then(function (permission) {
         if (permission === "granted") {
           // Se a permissão for concedida, exibe a notificação
-          const notification = new Notification("Checklist Live IBA", {
+          const notification = new Notification("Checklist Live Waves", {
             body: "A live está prestes a iniciar.",
           });
         }
