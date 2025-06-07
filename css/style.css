@@ -10,9 +10,27 @@
 }
 
 body {
-    color: white;
+  color: black;
+  background: linear-gradient(to bottom, #FFF, #EEE);
+  transition: background 0.5s ease, color 0.3s ease;
+  
+  .docs a, #toggleTheme{
+    color:black;
+  }
+
+}
+
+body.dark-mode {
+  color: white;
+  background: linear-gradient(to bottom, #0f0f0f, #333);
+  
+  .docs a, #toggleTheme{
+    color:white;
+  }
+}
+
+body {
     min-height: 100vh; 
-    background: linear-gradient(to bottom, #0f0f0f, #333); 
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
@@ -33,7 +51,6 @@ body {
 }
 
 .docs a {
-    color: #FFF;
     text-decoration: none;
     font-size: 24px;
 

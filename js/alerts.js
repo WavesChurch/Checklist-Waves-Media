@@ -1,5 +1,5 @@
 const alertInputs = document.querySelectorAll('.alertAt');
-const body = document.getElementById('checklist');
+const checklistId = document.getElementById('checklist');
 const stopButton = document.getElementById('btnStopAlert');
 
 const triggeredAlerts = new Set(); 
@@ -15,7 +15,7 @@ setInterval(() => {
     const targetTime = input.value;
 
     if (targetTime && targetTime === currentHHMM && !triggeredAlerts.has(alertId)) {
-      body.classList.add('alert-hour');
+      checklistId.classList.add('alert-hour');
       currentAlertIdPlaying = alertId;
       triggeredAlerts.add(alertId);
     }
@@ -24,7 +24,7 @@ setInterval(() => {
 
 stopButton.addEventListener('click', () => {
   if (currentAlertIdPlaying !== null) {
-    body.classList.remove('alert-hour');
+    checklistId.classList.remove('alert-hour');
     currentAlertIdPlaying = null;
   }
 });
