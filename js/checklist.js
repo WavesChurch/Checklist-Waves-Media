@@ -55,7 +55,7 @@ const SetCamAUp = {
     { title: "Use the 18-35mm lens" },
     { title: "Add the camera battery" },
     { title: "Turn on the 'CAM A' labeled switch in the NavePoint and check that it connects (wait 30 seconds before turning other CAM switches on)" },
-    { title: "Get a headset forthe camera (preferably the ones with both sides)" },
+    { title: "Get a headset for the camera (preferably the ones with both sides)" },
     { title: "Change preset for worship" },
   ],
 };
@@ -67,7 +67,7 @@ const SetCamBUp = {
     { title: "Add the camera battery" },
     { title: "Add the display batteries" },
     { title: "Turn on the 'CAM B' labeled switch in the NavePoint and check that it connects (wait 30 seconds before turning other CAM switches on)" },
-    { title: "Get a headset forthe camera (preferably the ones with both sides)" },
+    { title: "Get a headset for the camera (preferably the ones with both sides)" },
     { title: "Change preset for worship" },
   ],
 };
@@ -78,7 +78,7 @@ const SetCamCUp = {
     { title: "Use the 18-35mm lens" },
     { title: "Add the camera battery" },
     { title: "Turn on the 'CAM C' labeled switch in the NavePoint and check that it connects (wait 30 seconds before turning other CAM switches on)" },
-    { title: "Get a headset forthe camera (preferably the ones with both sides)" },
+    { title: "Get a headset for the camera (preferably the ones with both sides)" },
     { title: "Change preset for worship" },
   ],
 };
