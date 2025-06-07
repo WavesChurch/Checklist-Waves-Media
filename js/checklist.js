@@ -40,24 +40,58 @@ const initialConfig = {
 const TurnTVsOn = {
   id: "TurnTVsOn",
   todo: [
+    { title: "Turn on the 'TVs' labeled switch in the NavePoint for the TVs inside" },
+    { title: "Turn on the TVs inside (TCL/FireTv Control)" },
+    { title: "Make sure to also turn on the 2 TVs facing the altar" },
     { title: "Turn on the 'lobby' labeled switch in the NavePoint for the TVs in the lobby" },
     { title: "Turn on the TVs in the lobby (LG Control), and set volume to 20" },
+    { title: "In the ProPresenter for the lobby, select the 'Welcome' banners" },
   ],
 };
 
-const SetCamerasUp = {
-  id: "SetCamerasUp",
+const SetCamAUp = {
+  id: "SetCamAUp",
   todo: [
-    { title: "placeholder" },
+    { title: "Use the 18-35mm lens" },
+    { title: "Add the camera battery" },
+    { title: "Turn on the 'CAM A' labeled switch in the NavePoint and check that it connects" },
+    { title: "Change preset for worship" },
+  ],
+};
+
+const SetCamBUp = {
+  id: "SetCamBUp",
+  todo: [
+    { title: "Use the 24-105mm lens" },
+    { title: "Add the camera battery" },
+    { title: "Add the display batteries" },
+    { title: "Turn on the 'CAM B' labeled switch in the NavePoint and check that it connects" },
+    { title: "Change preset for worship" },
+  ],
+};
+
+const SetCamCUp = {
+  id: "SetCamCUp",
+  todo: [
+    { title: "Use the 18-35mm lens" },
+    { title: "Add the camera battery" },
+    { title: "Turn on the 'CAM C' labeled switch in the NavePoint and check that it connects" },
+    { title: "Change preset for worship" },
   ],
 };
 
 const configLivestream = {
   id: "ConfigureLivestream",
   todo: [
-    { title: "placeholder" },
-    { title: "Add title: " + infoService() },
-    { title: "Visibility - " + privacyService() },
+    { title: "Open Youtube and sign in if needed (if it asks for password, call Tati)" },
+    { title: "Go to Create > Go Live > Manage > Schedule Stream" },
+    { title: "Use the last service's information but change the DATE" },
+    { title: "Set ads to 'OFF'" },
+    { title: "Set visibility to public" },
+    { title: "Set time for 10:55 (we only stream the second service)" },
+    { title: "Open Wirecast and select the broadcast template" },
+    { title: "Connect the SSD (if it's not there, check with Victor Valle)" },
+    { title: "Ask the person in ProPresenter if they setup the livestream announcements (make sure to check before service)" },
   ],
 };
 
@@ -92,7 +126,9 @@ const finish = {
 const todos = [
   initialConfig,
   TurnTVsOn,
-  SetCamerasUp,
+  SetCamAUp,
+  SetCamBUp,
+  SetCamCUp,
   configLivestream,
   worship,
   tithesAndOffering,
