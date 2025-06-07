@@ -54,7 +54,8 @@ const SetCamAUp = {
   todo: [
     { title: "Use the 18-35mm lens" },
     { title: "Add the camera battery" },
-    { title: "Turn on the 'CAM A' labeled switch in the NavePoint and check that it connects" },
+    { title: "Turn on the 'CAM A' labeled switch in the NavePoint and check that it connects (wait 30 seconds before turning other CAM switches on)" },
+    { title: "Get a headset forthe camera (preferably the ones with both sides)" },
     { title: "Change preset for worship" },
   ],
 };
@@ -65,7 +66,8 @@ const SetCamBUp = {
     { title: "Use the 24-105mm lens" },
     { title: "Add the camera battery" },
     { title: "Add the display batteries" },
-    { title: "Turn on the 'CAM B' labeled switch in the NavePoint and check that it connects" },
+    { title: "Turn on the 'CAM B' labeled switch in the NavePoint and check that it connects (wait 30 seconds before turning other CAM switches on)" },
+    { title: "Get a headset forthe camera (preferably the ones with both sides)" },
     { title: "Change preset for worship" },
   ],
 };
@@ -75,8 +77,18 @@ const SetCamCUp = {
   todo: [
     { title: "Use the 18-35mm lens" },
     { title: "Add the camera battery" },
-    { title: "Turn on the 'CAM C' labeled switch in the NavePoint and check that it connects" },
+    { title: "Turn on the 'CAM C' labeled switch in the NavePoint and check that it connects (wait 30 seconds before turning other CAM switches on)" },
+    { title: "Get a headset forthe camera (preferably the ones with both sides)" },
     { title: "Change preset for worship" },
+  ],
+};
+
+const SetCamerasExtra = {
+  id: "SetCamerasExtra",
+  todo: [
+    { title: "Raise and level all 3 tripods" },
+    { title: "Set the 3 cameras in the correct tripods (CAM A is close to the drums and CAM C is close to the keyboard)" },
+    { title: "Put the 3 headsets for the camera operators in the tripods" },
   ],
 };
 
@@ -88,31 +100,46 @@ const configLivestream = {
     { title: "Use the last service's information but change the DATE" },
     { title: "Set ads to 'OFF'" },
     { title: "Set visibility to public" },
-    { title: "Set time for 10:55 (we only stream the second service)" },
+    { title: "Set time for 10:55 (we currently only stream the second service)" },
+  ],
+};
+
+const configRecording = {
+  id: "ConfigureRecording",
+  todo: [
     { title: "Open Wirecast and select the broadcast template" },
-    { title: "Connect the SSD (if it's not there, check with Victor Valle)" },
+    { title: "Connect the SSD to the computer (if it's not there, check with Victor Valle)" },
+    { title: "Make sure the SSD is empty/formatted" },
+    { title: "In Wirecast, go to the menu (at the top), select Output > Output Settings, in the 'Record to Disk' section, go to File and click 'Browse...', select the correct SSD" },
+    { title: "Add the other SSD to HyperDeck and make sure the input is in SDI + SDI" },
     { title: "Ask the person in ProPresenter if they setup the livestream announcements (make sure to check before service)" },
+    { title: "Check that sound is outputting correctly in broadcast (otherwise just use the backup)" },
   ],
 };
 
 const worship = {
   id: "Worship",
   todo: [
-    { title: "placeholder" },
+    { title: "5 minutes before worship starts, start recording in Wirecast and in HyperDeck" },
+    { title: "At least 2 minutes before worship starts, make sure everyone is in position" },
   ],
 };
 
 const tithesAndOffering = {
   id: "TithesOffering",
   todo: [
-    { title: "placeholder" },
+    { title: "Set the 'Tithes and Offering' banner in Wirecast around the same time that the ProPresenter team adds the banner to the screens inside" },
+    { title: "Ask the person in CAM B to get a wide image of the big screen before announcements (in case ProPresenter goes wrong in both CAM 7 and Wirecast)" },
+    { title: "Get the big lens ready for CAM A and CAM C" },
+    { title: "Right before the announcements, make a smooth transition ('Auto' Button) to ProPresenter (CAM 7)" },
+    { title: "Remember CAM A and CAM C to change the camera preset for the sermon" },
   ],
 };
 
 const sermon = {
   id: "Sermon",
   todo: [
-    { title: "placeholder" },
+    { title: "Show at least once the banner with the preacher's name in Wirecast for the livestream (can stay for 20-30 seconds)" },
   ],
 };
 
@@ -129,7 +156,9 @@ const todos = [
   SetCamAUp,
   SetCamBUp,
   SetCamCUp,
+  SetCamerasExtra,
   configLivestream,
+  configRecording,
   worship,
   tithesAndOffering,
   sermon,
