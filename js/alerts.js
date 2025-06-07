@@ -1,56 +1,31 @@
-moment.locale("en-us");
-const btnStopAlert = document.getElementById("btnStopAlert");
-const alertInputs = [...document.querySelectorAll(".alertAt")];
-const alerts = alertInputs.map((input, index) => ({
-  id: index,
-  timeInput: input,
-  removed: false,
-}));
+const alertInputs = document.querySelectorAll('.alertAt');
+const body = document.getElementById('checklist');
+const stopButton = document.getElementById('btnStopAlert');
 
-let currentActiveAlert = null;
-let displayTimer;
-let notificationDisplayed = false;
+const triggeredAlerts = new Set(); // to prevent re-triggering
+let currentAlertIdPlaying = null;
 
-alerts.forEach((alert) => {
-  alert.timeInput.addEventListener("change", () => {
-    alert.removed = false;
-    if (currentActiveAlert?.id === alert.id) {
-      checklist.classList.remove("alert-hour");
-      currentActiveAlert = null;
+// Check every second for matching times
+setInterval(() => {
+  const now = new Date();
+  const currentHHMM = now.toTimeString().slice(0, 5); // "HH:MM"
+
+  alertInputs.forEach(input => {
+    const container = input.closest('.alert-container');
+    const alertId = container.getAttribute('data-alert-id');
+    const targetTime = input.value;
+
+    if (targetTime && targetTime === currentHHMM && !triggeredAlerts.has(alertId)) {
+      body.classList.add('alert-hour');
+      currentAlertIdPlaying = alertId;
+      triggeredAlerts.add(alertId);
     }
   });
-});
+}, 1000);
 
-displayTimer = setInterval(() => {
-  hoje.innerHTML = moment().format("LL");
-  timer.innerHTML = moment().format("HH:mm:ss");
-
-  const currentTime = moment().format("HH:mm:ss");
-
-  alerts.forEach((alert) => {
-    const alertTime = alert.timeInput.value;
-
-    if (
-      alertTime &&
-      currentTime >= alertTime &&
-      !alert.removed &&
-      currentActiveAlert === null 
-    ) {
-      checklist.classList.add("alert-hour");
-      if (!notificationDisplayed) {
-        mostrarNotificacao();
-        notificationDisplayed = true;
-      }
-      currentActiveAlert = alert;
-    }
-  });
-}, 100);
-
-btnStopAlert.addEventListener("click", () => {
-  if (currentActiveAlert) {
-    currentActiveAlert.removido = true;
-    checklist.classList.remove("alert-hour");
-    notificationDisplayed = false;
-    currentActiveAlert = null;
+stopButton.addEventListener('click', () => {
+  if (currentAlertIdPlaying !== null) {
+    body.classList.remove('alert-hour');
+    currentAlertIdPlaying = null;
   }
 });

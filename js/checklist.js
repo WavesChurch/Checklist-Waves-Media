@@ -1,5 +1,5 @@
 moment.locale("en-us");
-const checklist = document.getElementById("checklist");
+
 const alertarAs = document.getElementById("alertarAs");
 const selecionarTodos = [...document.getElementsByClassName("select-input")];
 const selecionarTodosOsMinimizers = [

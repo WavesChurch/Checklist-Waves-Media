@@ -22,7 +22,7 @@
         <a href="docs/index.html" target="_blank">Questions? Click Here</a>
       </div>
       <div class="d-flex flex-column justify-content-end">
-        <span id="hoje"></span>
+        <span id="today"></span>
         <span id="timer"></span>
       </div>
     </div>
@@ -75,17 +75,17 @@
       <div class="col-md-3">
         <div class="alert-container" data-alert-id="0">
           <label class="form-label fw-bold">Alert At</label>
-          <input type="time" class="alertAt" />
+          <input type="time" class="alertAt" value="09:55" />
         </div>
 
         <div class="alert-container" data-alert-id="1">
           <label class="form-label fw-bold">Alert At</label>
-          <input type="time" class="alertAt" />
+          <input type="time" class="alertAt" value="10:55" />
         </div>
 
         <div class="alert-container" data-alert-id="2">
           <label class="form-label fw-bold">Alert At</label>
-          <input type="time" class="alertAt" />
+          <input type="time" class="alertAt" value="10:59"/>
         </div>
 
         <button id="btnStopAlert">Stop Alert</button>
@@ -100,6 +100,7 @@
 
   <script src="lib/moment-locales.js"></script>
   <script src="js/notification.js"></script>
+  <script src="js/displayTimer.js"></script>
   <script src="js/checklist.js"></script>
   <script src="js/alerts.js"></script>
   <script src="js/notes.js"></script>

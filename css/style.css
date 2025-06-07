@@ -10,10 +10,14 @@
 }
 
 body {
-    background-image: var(--gradient-bg);
     color: white;
-
-    height: 100vh;
+    min-height: 100vh; /* ensures body is at least full screen height */
+    background: linear-gradient(to bottom, #0f0f0f, #333); /* your gradient */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* optional - keeps it in place while scrolling */
+    background-size: cover;        /* makes the gradient scale properly */
+    margin: 0;
+    padding: 0;
 
     h1 {
         font-size: 2.5rem;
@@ -45,13 +49,6 @@ body {
     height: 60px;
 }
 
-.alert-hour {
-    animation-name: alertable;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
 .select-all {
     display: flex;
     gap: 0.5rem;
@@ -63,11 +60,14 @@ body {
 }
 
 @keyframes alertable {
-    from {
-        background-image: var(--gradient-bg);
-    }
+  0%   { background-color: #ffcc00; }
+  100% { background-color: #ff6666; }
+}
 
-    to {
-        background-image: var(--alert-bg);
-    }
+.alert-hour {
+  animation-name: alertable;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background: none;
 }
