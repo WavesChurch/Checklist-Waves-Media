@@ -28,7 +28,7 @@ const privacyService = () => {
 const initialConfig = {
   id: "TurnEquipmentOn",
   todo: [
-    { title: "Check that all computers are on (see the white status light in the front)" },
+    { title: "Check that all computers are on (see the white status light in the front)", img:"../docs/v1.0/_media/logo-Waves.png" },
     { title: "Turn the Camera Switcher on (button is below table)" },
     { title: "Turn the 'led' labeled switch on the NaverPoint" },
     { title: "Check that the two Nova Star VX1000 video processors are turned on (switches on the back)" },
@@ -147,7 +147,11 @@ const sermon = {
 const finish = {
   id: "Finish",
   todo: [
-    { title: "placeholder" },
+    { title: "Put cameras and lenses safely in the closet" },
+    { title: "Remove the SSDs with the recordings and put them above the mac next to the door" },
+    { title: "Turn off all TVs inside and in the lobby" },
+    { title: "Turn off all switches in the NaverPoint" },
+    { title: "Turn off the two big screens (big white switch next to the window)" },
   ],
 };
 
@@ -176,6 +180,29 @@ selecionarTodos.forEach((checkbox) => {
   });
 });
 
+function showImage(){
+  document.getElementById("imageOverlay").style.display = "flex";
+}
+
+function hideImage(){
+  document.getElementById("imageOverlay").style.display = "none";
+}
+
+function renderImage(img) {
+
+  if (img) {
+    return `
+    <button onclick="showImage()">Img</button>
+    <div id="imageOverlay" onclick="hideImage()"> 
+      <span class="closeBtn">&times;</span>
+      <img src="${img}" alt="Overlay Image">
+    </div>`;
+  }
+  else{
+    return "";
+  }
+}
+
 function renderizarItemDoChecklist(obj) {
   const element = document.getElementById(obj.id);
 
@@ -183,10 +210,10 @@ function renderizarItemDoChecklist(obj) {
     (item) =>
     (element.innerHTML += `
         <div class="form-check check-all">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox">  
-              ${item.title}
-        	</label>
+          <label class="form-check-label">        	
+            <input class="form-check-input" type="checkbox">  
+            ${item.title}  ${renderImage(item.img)}          
+            </label>
         </div>`)
   );
 }
