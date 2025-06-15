@@ -34,6 +34,7 @@ const initialConfig = {
     { title: "Check that the two Nova Star VX1000 video processors are turned on (switches on the back)" },
     { title: "Turn the 'hyperx' labeled switch on the NavePoint for the HyperDeck" },
     { title: "Set the Audio Splitter above the NavePoint to 'Broadcast'" },
+    { title: "Check power outlet in the NaverPoint" },
   ],
 };
 
