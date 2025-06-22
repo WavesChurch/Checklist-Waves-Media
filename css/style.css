@@ -17,7 +17,7 @@ body {
 
 body.dark-mode {
   color: white;
-  background-color: darkgray;
+  background-color: #333;
   .docs a, #toggleTheme{
     color:white;
   }
