@@ -8,7 +8,7 @@
 
 body {
   color: black;
-  
+  background-color: whitesmoke;
   .docs a, #toggleTheme{
     color:black;
   }
@@ -17,6 +17,7 @@ body {
 
 body.dark-mode {
   color: white;
+  background-color: darkgray;
   .docs a, #toggleTheme{
     color:white;
   }
@@ -83,6 +84,26 @@ body {
   background: none;
 }
 
+.check-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.img-button {
+  border-width: 1px;
+  border-radius: 5%;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 5px;
+  color: #555;
+}
+
+.img-button:hover {
+  color: #000;
+}
+
 #imageOverlay {
   position: fixed;
   display: none;
@@ -111,4 +132,3 @@ body {
   color: white;
   cursor: pointer;
 }
-

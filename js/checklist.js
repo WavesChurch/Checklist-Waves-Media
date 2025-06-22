@@ -28,9 +28,9 @@ const privacyService = () => {
 const initialConfig = {
   id: "TurnEquipmentOn",
   todo: [
-    { title: "Check that all computers are on (see the white status light in the front)", img:"../docs/v1.0/_media/logo-Waves.png" },
-    { title: "Turn the Camera Switcher on (button is below table)" },
-    { title: "Turn the 'led' labeled switch on the NaverPoint" },
+    { title: "Check that all computers are on (see the white status light in the front)", img:"../checklist-photos/checklist-step-1.1.jpeg" },
+    { title: "Turn the Camera Switcher on (button is below table)", img:"../checklist-photos/checklist-step-1.2.jpeg" },
+    { title: "Turn the 'led' labeled switch on the NaverPoint", img:"../checklist-photos/checklist-step-1.3.jpeg" },
     { title: "Check that the two Nova Star VX1000 video processors are turned on (switches on the back)" },
     { title: "Turn the 'hyperx' labeled switch on the NavePoint for the HyperDeck" },
     { title: "Set the Audio Splitter above the NavePoint to 'Broadcast'" },
@@ -180,8 +180,18 @@ selecionarTodos.forEach((checkbox) => {
   });
 });
 
-function showImage(){
-  document.getElementById("imageOverlay").style.display = "flex";
+function showImage(src) {
+  const overlay = document.getElementById("imageOverlay");
+
+  let img = overlay.querySelector("img");
+  if (!img) {
+    img = document.createElement("img");
+    overlay.appendChild(img);
+  }
+
+  img.src = src;
+
+  overlay.style.display = "flex";
 }
 
 function hideImage(){
@@ -189,13 +199,12 @@ function hideImage(){
 }
 
 function renderImage(img) {
-
   if (img) {
     return `
-    <button onclick="showImage()">Img</button>
+    <button class="img-button" onclick="showImage('${img}')">IMG</button>
     <div id="imageOverlay" onclick="hideImage()"> 
       <span class="closeBtn">&times;</span>
-      <img src="${img}" alt="Overlay Image">
+      <img id="imgToShow" alt="Overlay Image">
     </div>`;
   }
   else{
@@ -205,22 +214,24 @@ function renderImage(img) {
 
 function renderizarItemDoChecklist(obj) {
   const element = document.getElementById(obj.id);
-
   obj.todo.forEach(
     (item) =>
     (element.innerHTML += `
         <div class="form-check check-all">
-          <label class="form-check-label">        	
-            <input class="form-check-input" type="checkbox">  
-            ${item.title}  ${renderImage(item.img)}          
+          <div class="check-item-wrapper">
+            <label class="form-check-label">        	
+              <input class="form-check-input" type="checkbox">  
+                ${item.title} 
+              </input> 
             </label>
+            <div>${renderImage(item.img)}</div>      
+          </div>
         </div>`)
   );
 }
 
 function minimizarOuMaximizarTodosDoGrupo(target, isChecked) {
   const form = document.getElementById(target.dataset.target);
-
   return isChecked
     ? form.classList.add("hide-checkbox")
     : form.classList.remove("hide-checkbox");
