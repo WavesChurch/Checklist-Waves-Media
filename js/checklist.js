@@ -28,9 +28,9 @@ const privacyService = () => {
 const initialConfig = {
   id: "TurnEquipmentOn",
   todo: [
-    { title: "Check that all computers are on (see the white status light in the front)", img:"checklist-photos/checklist-step-1.1.jpeg" },
-    { title: "Turn the Camera Switcher on (button is below table)", img:"checklist-photos/checklist-step-1.2.jpeg" },
-    { title: "Turn the 'led' labeled switch on the NaverPoint", img:"checklist-photos/checklist-step-1.3.jpeg" },
+    { title: "Check that all computers are on (see the white status light in the front)", img:"checklist-step-1.1.jpeg" },
+    { title: "Turn the Camera Switcher on (button is below table)", img:"checklist-step-1.2.jpeg" },
+    { title: "Turn the 'led' labeled switch on the NaverPoint", img:"checklist-step-1.3.jpeg" },
     { title: "Check that the two Nova Star VX1000 video processors are turned on (switches on the back)" },
     { title: "Turn the 'hyperx' labeled switch on the NavePoint for the HyperDeck" },
     { title: "Set the Audio Splitter above the NavePoint to 'Broadcast'" },
@@ -189,8 +189,8 @@ function showImage(src) {
     overlay.appendChild(img);
   }
 
-  img.src = "https://waveschurch.github.io/" + src;
-
+  img.src = "https://raw.githubusercontent.com/WavesChurch/Checklist-Waves-Media/refs/heads/main/checklist-photos/" + src;
+  console.log(img.src);
   overlay.style.display = "flex";
 }
 
